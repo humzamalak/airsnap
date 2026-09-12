@@ -10,9 +10,12 @@ Research / UW UbiComp Lab, CHI 2012).
 
 ## Status
 
-Phase 1 — signal core (tone playback, mic capture, FFT bandwidth detector,
-live terminal readout). Phase 2 (native scroll events via CGEvent) and
-Phase 3 (menu-bar app, calibration sweep) in progress.
+**Working (verified live on this MacBook):** pilot tone playback + mic capture
+duplex stream, 19 kHz pilot detected with SNR > 1000, sideband-asymmetry
+detector (silence at rest: 0 false events in 3 s), CGEvent scroll posting.
+Phase 1–2 committed. Remaining: real-hand tuning session (thresholds
+`ASYM_THRESHOLD`, `MIN_EVENT_INTERVAL`, `SCROLL_SCALE`), menu-bar app,
+optional calibration sweep.
 
 ## Requirements
 
