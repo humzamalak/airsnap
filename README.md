@@ -21,14 +21,17 @@ optional calibration sweep.
 
 - macOS with built-in speakers + microphone
 - Python 3.9+
-- `pip install numpy sounddevice`
+- `pip install -r requirements.txt` (numpy, sounddevice, and pyobjc-framework-Quartz for `--scroll`)
 - Microphone permission for your terminal app (first run prompts)
+- For `--scroll`: Accessibility permission for your terminal app (System Settings → Privacy & Security → Accessibility)
+- Built-in speakers and mic as the default audio devices (Bluetooth headset mics sample too low to hear the 19 kHz tone)
 
 ## Usage
 
 ```bash
 python airsnap.py                 # 19 kHz pilot, live motion readout
 python airsnap.py --freq 18500    # if speakers roll off too high
+python airsnap.py --scroll        # also post real scroll events
 python airsnap.py --list-devices  # inspect audio devices
 ```
 
